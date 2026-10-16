@@ -10,8 +10,8 @@ public:
   friend std::ostream &operator<<(std::ostream &out, const Fraction &value);
 
 private:
-  int numerator_;
-  int denominator_;
+  int m_numerator;
+  int m_denominator;
 };
 
 #endif

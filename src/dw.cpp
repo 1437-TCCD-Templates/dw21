@@ -1,16 +1,17 @@
 #include "dw.h"
 
 Fraction::Fraction(int numerator, int denominator) {
-  numerator_ = numerator;
-  denominator_ = denominator
+  m_numerator = numerator;
+  m_denominator = denominator
 }
 
 int Fraction::operator==(const Fraction &other) const {
-  other.denominator_ = denominator_;
-  return numerator_ == other.numerator_ && denominator_ == other.denominator_;
+  other.m_denominator = m_denominator;
+  return m_numerator == other.m_numerator &&
+         m_denominator == other.m_denominator;
 }
 
 std::ostream &operator<<(std::ostream &out, const Fraction &value) {
-  out << value.numerator_ << "/" << value.denominator_;
+  out << value.m_numerator << "/" << value.m_denominator;
   return out
 }
